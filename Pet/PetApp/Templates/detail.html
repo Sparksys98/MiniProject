@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Detail</title>
+  </head>
+  <body>
+    <ul>
+      <li>{{pet.name}}</li>
+      <li>{{pet.age}}</li>
+      <li>{{pet.available}}</li>
+      <li>{{pet.image}}</li>
+      <li>{{pet.price}}</li>
+    </ul>
+    <a href="{% url 'pet_update' pet.id%}">
+      <button type="button" name="button">
+        Update
+      </button>
+    </a>
+    <br>
+    <a href="{% url 'pet_delete' pet.id %}">
+      <button type="button" name="button">
+        Delete
+      </button>
+    </a>
+  </body>
+</html>
